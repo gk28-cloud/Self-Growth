@@ -6,12 +6,11 @@
 const CACHE_NAME = 'self-growth-v1';
 
 const ASSETS = [
-  '/',
-  '/index.html',
-  '/styles.css',
-  '/script.js',
-  '/manifest.json',
-  'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap',
+  '/Self-Growth/',
+  '/Self-Growth/index.html',
+  '/Self-Growth/styles.css',
+  '/Self-Growth/script.js',
+  '/Self-Growth/manifest.json',
 ];
 
 /* ── Install: cache all assets ── */
@@ -49,7 +48,7 @@ self.addEventListener('fetch', event => {
       }).catch(() => {
         // Offline fallback for navigation
         if (event.request.mode === 'navigate') {
-          return caches.match('/index.html');
+          return caches.match('/Self-Growth/index.html');
         }
       });
     })
